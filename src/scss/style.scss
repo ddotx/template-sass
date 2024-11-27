@@ -1,5 +1,62 @@
-$clr-primary: #00ff5e;
+$clr-primary: green;
+$degree : 70;
+$phone: 768px;
+
+// :root {
+//     --clr-primary: green;
+// }
+
+.skew {
+    transform: skewX(#{$degree}deg);
+}
 
 body {
+    /*
+    $clr-primary: red !global;
+    background-color: var(--clr-primary); 
+    */
     background-color: $clr-primary;
+}
+
+.card {
+    background-color: $clr-primary;
+
+    &__title {
+        color: white;
+    }
+
+    @media (min-width: $phone) {
+        background-color: blue;
+    }
+}
+
+.nav-link {
+    font-size: 2rem;
+    color: $clr-primary;
+
+    footer & {
+        background-color: $clr-primary;
+    }
+}
+
+a {
+    text: {
+        decoration: none;
+        transform: uppercase;
+    }
+}
+
+.btn {
+    display: inline-block;
+    color: white;
+
+    &__primary {
+        background-color: $clr-primary;
+
+        &:hover, &:focus {
+            background-color: black;
+        }
+    }
+
+
 }
